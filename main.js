@@ -7,6 +7,40 @@
     return res;
   }
 
+  function renderCard(displayName, displayIcon) {
+    // para
+    let cardPara = document.createElement('p');
+    cardPara.innerText = "comming soon....."
+
+    // heading
+    let cardHeadingUndeline = document.createElement('u');
+    let cardHeading = document.createElement('h2');
+    cardHeading.innerText = displayName
+    cardHeading.appendChild(cardHeadingUndeline);    
+    
+    // innerCard
+    let innerCardDiv = document.createElement('div');
+    innerCardDiv.className = "card-content";
+    innerCardDiv.appendChild(cardHeading);
+    innerCardDiv.appendChild(cardPara);
+
+    // hr
+    let hr = document.createElement('hr');
+
+    // card image
+    let cardImg = document.createElement('img');
+    cardImg.src = displayIcon
+
+    // main card
+    let cardDiv = document.createElement('div');
+    cardDiv.className = "card";
+    cardDiv.appendChild(cardImg);
+    cardDiv.appendChild(hr);
+    cardDiv.appendChild(innerCardDiv);
+
+    return cardDiv;
+  }
+
   const versionJson = await getdata('https://valorant-api.com/v1/version');
   let versionData = versionJson["data"];
   let weaponsData = [];
@@ -26,27 +60,10 @@
     localStorage.setItem("weapons-data", JSON.stringify(weaponsData));
   }
 
+  weaponsData.sort((w1, w2) => w1["displayName"].localeCompare(w2["displayName"]));
 
   weaponsData.forEach(ele => {
-    cardDiv.innerHTML += `
-    
-    <div class="col">
-    <div class="card h-100">
-      <img class="m-4 img-fluid" src= ${ele["displayIcon"]}
-        alt=${ele["displayName"]} loading="lazy"/>
-      <div class="card-body">
-        <h5 class="card-title">${ele["displayName"]}</h5>
-        <p class="card-text">
-            comming soon.
-        </p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">comming soon.</small>
-      </div>
-    </div>
-  </div>
-
-    `
+    cardDiv.appendChild(renderCard(ele["displayName"], ele["displayIcon"]));
   });
 
 })();

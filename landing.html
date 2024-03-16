@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ValoInfo</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    nav {
+      width: 100%;
+      background-color: black;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+    }
+
+    nav ul li {
+      padding: 1rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      
+    }
+
+    .hero {
+      text-align: center;
+      margin-top: 2rem;
+
+    }
+    
+    .hero * {
+      margin-top: 1rem;
+    }
+
+    .work-in-progress {
+      margin-top: 1rem;
+      /* display: none; */
+    }
+
+    .main {
+        margin: .8rem;
+        margin-top: 2rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr; /* Adjust 200px as needed */
+    }
+
+    .main .card {
+        width: 100%;
+        border: 1px solid black;
+        border-radius: .6rem;
+        background-color: rgba(0, 0, 0, 0.183);
+        box-shadow: 5px 10px 18px #888888;
+    }
+
+    .main .card img {
+        max-width: 100%;
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    @media (min-width: 768px) {
+        .main {
+          grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (min-width: 1024px) {
+      .main {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+
+    .main .card .card-content {
+      padding: 1rem;
+    }
+
+    .main .card .card-content h2 {
+      padding: .4rem;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      margin: 2rem 0;
+      
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- nav -->
+  <nav>
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- work in progress -->
+  <div class="work-in-progress">
+    <marquee behavior="" direction="">
+      work 💪 in progress...
+    </marquee>
+  </div>
+
+  <!-- hero -->
+  <div class="hero">
+    <hr>
+    <h1>🗡️Bunduko ka Saudagar 🔫</h1>
+    <hr>
+  </div>
+
+  <!-- main content -->
+  <div class="main">
+
+    <div class="card">
+      <img src="https://media.valorant-api.com/weapons/63e6c2b6-4a8e-869c-3d4c-e38355226584/displayicon.png" alt="">
+      <hr>
+      <div class="card-content">
+        <h2><u>Odin</u></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, temporibus?</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://media.valorant-api.com/weapons/63e6c2b6-4a8e-869c-3d4c-e38355226584/displayicon.png" alt="">
+      <hr>
+      <div class="card-content">
+        <h2><u>Odin</u></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, temporibus?</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://media.valorant-api.com/weapons/63e6c2b6-4a8e-869c-3d4c-e38355226584/displayicon.png" alt="">
+      <hr>
+      <div class="card-content">
+        <h2><u>Odin</u></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, temporibus?</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://media.valorant-api.com/weapons/63e6c2b6-4a8e-869c-3d4c-e38355226584/displayicon.png" alt="">
+      <hr>
+      <div class="card-content">
+        <h2><u>Odin</u></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, temporibus?</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://media.valorant-api.com/weapons/63e6c2b6-4a8e-869c-3d4c-e38355226584/displayicon.png" alt="">
+      <hr>
+      <div class="card-content">
+        <h2><u>Odin</u></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, temporibus?</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://media.valorant-api.com/weapons/63e6c2b6-4a8e-869c-3d4c-e38355226584/displayicon.png" alt="">
+      <hr>
+      <div class="card-content">
+        <h2><u>Odin</u></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, temporibus?</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- footer  -->
+  <footer>
+    &copy; All rights reserved. WoWHack | Powered by Valorant API
+  </footer>
+</body>
+</html>
